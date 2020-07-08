@@ -6,7 +6,7 @@ const router = express.Router();
 router.route('/auth/signin')
         .post(authctrl.signin);
 router.route('/auth/signout')
-        .get(authctrl.signin);
+        .get(authctrl.signout);
 
 
 export default router;

@@ -72,6 +72,7 @@ const remove = async (req, res) => {
         let deletedUser = await user.remove();
         deletedUser.hashed_password = undefined;
         deletedUser.salt = undefined;
+        res.json(deletedUser);
     } catch(err) {
         return res.status(400).json({
             error: errorHandler.getErrorMessage(err)
